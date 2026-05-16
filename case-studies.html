@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work &mdash; Eniola Ajayi-Bembe</title>
+  <meta name="description" content="Selected case studies across SaaS, fintech, gaming, e-commerce, health insurance, and design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23163066'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='%237BA7F5' font-family='system-ui' font-size='18' font-weight='700'%3EE%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,30..100,0..1;1,9..144,400..700,30..100,0..1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+/* ============================================
+   ENIOLA AJAYI-BEMBE — Portfolio
+   Senior Product Manager · SaaS / Tech
+   Palette: edf6f9 / 83c5be / 06807d / 005f73
+   ============================================ */
+
+:root {
+  --bg:            #edf6f9;
+  --surface:       #ffffff;
+  --border:        #83c5be;
+  --border-soft:   #c8e3df;
+  --text:          #0a0a0a;
+  --text-muted:    #525252;
+  --accent:        #06807d;
+  --accent-hover:  #064045;
+  --success:       #005f73;
+  --contact-bg:    #1d3557;
+
+  --radius-sm: 8px;
+  --radius:    14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 1px 2px rgba(29, 53, 87, 0.06);
+  --shadow:    0 8px 24px rgba(29, 53, 87, 0.08);
+  --shadow-lg: 0 20px 50px rgba(29, 53, 87, 0.12);
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ----- Layout ----- */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.container-narrow { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+/* ----- Navigation ----- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(237, 246, 249, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; max-width: 1100px; margin: 0 auto;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+.nav-brand span { color: var(--success); }
+
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+.nav-links a {
+  font-size: 15px; font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s; position: relative;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active { color: var(--accent); }
+.nav-links a.active::after {
+  content: ''; position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px; background: var(--success); border-radius: 2px;
+}
+
+/* ----- Hero ----- */
+.hero { padding: 100px 0 60px; position: relative; overflow: hidden; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 24px;
+}
+.hero-eyebrow::before {
+  content: ''; width: 8px; height: 8px;
+  background: var(--success); border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 7vw, 84px);
+  font-weight: 500; line-height: 1.02;
+  letter-spacing: -0.03em; color: var(--text);
+  margin-bottom: 28px;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+}
+.hero h1 em {
+  font-style: italic;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 19px; color: var(--text-muted);
+  max-width: 640px; margin-bottom: 36px; line-height: 1.55;
+}
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 26px; border-radius: 999px;
+  font-size: 15px; font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer; border: none;
+  transition: all 0.2s ease; white-space: nowrap;
+}
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover {
+  background: var(--accent-hover); transform: translateY(-1px); box-shadow: var(--shadow);
+}
+.btn-secondary {
+  background: var(--surface); color: var(--accent); border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: var(--border); color: var(--accent); }
+
+.btn-tertiary {
+  background: transparent; color: var(--accent); padding: 14px 4px;
+  border-bottom: 1px solid transparent; border-radius: 0;
+}
+.btn-tertiary:hover { border-bottom-color: var(--accent); }
+
+.btn-arrow { transition: transform 0.2s; }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+/* ----- Sections ----- */
+section { padding: 80px 0; }
+
+.section-eyebrow {
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 500; line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text); margin-bottom: 16px;
+}
+.section-sub {
+  font-size: 18px; color: var(--text-muted);
+  max-width: 640px; margin-bottom: 48px;
+}
+
+/* ----- Stats strip ----- */
+.stats-strip {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px; background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 36px; margin: 40px 0;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 44px; font-weight: 600;
+  color: var(--accent); line-height: 1;
+  letter-spacing: -0.03em; margin-bottom: 6px;
+}
+.stat-label {
+  font-size: 13.5px; color: var(--text-muted); font-weight: 500;
+}
+
+/* ----- Industries grid ----- */
+.industries {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.industry {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: all 0.2s;
+}
+.industry:hover {
+  border-color: var(--border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.industry-name {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 600;
+  color: var(--accent); margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.industry-why {
+  font-size: 14.5px; color: var(--text-muted); line-height: 1.6;
+}
+
+/* ----- Experience ----- */
+.experience-grid { display: flex; flex-direction: column; gap: 20px; }
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: all 0.25s ease;
+}
+.exp-card:hover {
+  border-color: var(--border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.exp-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 8px; gap: 16px; flex-wrap: wrap;
+}
+.exp-role {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  color: var(--text); letter-spacing: -0.01em;
+}
+.exp-date {
+  font-size: 13px; color: var(--text-muted);
+  background: var(--bg); padding: 6px 12px;
+  border-radius: 999px; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.exp-company {
+  font-size: 15px; color: var(--success);
+  font-weight: 500; margin-bottom: 16px;
+}
+.exp-summary {
+  color: var(--text-muted);
+  font-size: 15.5px; line-height: 1.7;
+}
+.exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.exp-tag {
+  font-size: 12.5px; font-weight: 500;
+  background: var(--bg); color: var(--accent);
+  padding: 5px 12px; border-radius: 999px;
+  border: 1px solid var(--border-soft);
+}
+
+/* ----- Skills ----- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.skill-group {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 26px;
+}
+.skill-group h3 {
+  font-family: var(--font-display);
+  font-size: 17px; font-weight: 600;
+  color: var(--accent); margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+.skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-pill {
+  font-size: 13px; font-weight: 500;
+  color: var(--text); background: var(--bg);
+  padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--border-soft);
+}
+
+/* ----- Case study cards ----- */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.case-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex; flex-direction: column;
+}
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border);
+}
+
+.case-thumb {
+  aspect-ratio: 16 / 10;
+  background: var(--accent);
+  position: relative; overflow: hidden;
+}
+.case-thumb img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%; object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+.case-card:hover .case-thumb img { transform: scale(1.04); }
+
+/* Gradient placeholder thumbs (for cases without screenshots) */
+.case-thumb-fintech { background: linear-gradient(135deg, #06807d 0%, #064045 100%); }
+.case-thumb-gaming { background: linear-gradient(135deg, #005f73 0%, #1d3557 100%); }
+.case-thumb-fiber { background: linear-gradient(135deg, #064045 0%, #005f73 100%); }
+.case-thumb-zairaa { background: linear-gradient(135deg, #005f73 0%, #064045 100%); }
+.case-thumb-abeg { background: linear-gradient(135deg, #06807d 0%, #1d3557 100%); }
+
+.case-thumb-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  font-family: var(--font-display);
+  font-size: 36px; font-weight: 600;
+  color: white; letter-spacing: -0.02em;
+  text-align: center; padding: 20px;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.55) 100%);
+}
+.case-thumb-text small {
+  display: block; font-family: var(--font-body);
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-top: 10px; opacity: 0.7;
+}
+
+.case-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+
+.case-meta {
+  display: flex; gap: 8px;
+  margin-bottom: 14px; flex-wrap: wrap;
+}
+.case-meta-tag {
+  font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--success);
+}
+.case-meta-tag.divider::before {
+  content: '·'; margin-right: 8px; color: var(--text-muted);
+}
+
+.case-title {
+  font-family: var(--font-display);
+  font-size: 24px; font-weight: 600;
+  color: var(--text); margin-bottom: 12px;
+  line-height: 1.2; letter-spacing: -0.01em;
+}
+.case-desc {
+  color: var(--text-muted);
+  font-size: 15px; line-height: 1.6;
+  margin-bottom: 20px; flex: 1;
+}
+.case-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--accent); font-weight: 600;
+  font-size: 14.5px; align-self: flex-start;
+  transition: gap 0.2s;
+}
+.case-link:hover { gap: 10px; color: var(--success); }
+
+/* "Featured" highlight on flagship card */
+.case-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: stretch;
+}
+.case-card.featured .case-thumb { aspect-ratio: auto; }
+.case-card.featured .case-body { padding: 44px; justify-content: center; }
+.case-card.featured .case-title { font-size: 32px; }
+.case-card.featured .case-desc { font-size: 16px; }
+
+@media (max-width: 768px) {
+  .case-card.featured { grid-template-columns: 1fr; }
+  .case-card.featured .case-body { padding: 28px; }
+}
+
+.featured-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11.5px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: white; background: var(--success);
+  padding: 4px 10px; border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+/* ----- About ----- */
+.about-hero { padding: 80px 0 40px; }
+
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 60px; align-items: start;
+}
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.about-portrait {
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--success) 100%);
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 96px; font-weight: 600;
+  color: white; letter-spacing: -0.02em;
+  position: relative; overflow: hidden;
+}
+.about-portrait::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 50%);
+}
+
+.about-text p {
+  font-size: 17px; color: var(--text);
+  line-height: 1.75; margin-bottom: 20px;
+}
+.about-text p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 60px; font-weight: 600;
+  float: left; line-height: 0.9;
+  margin: 6px 12px 0 0; color: var(--accent);
+}
+
+/* ----- Pull quote ----- */
+.pull-quote {
+  background: var(--surface);
+  border-left: 4px solid var(--success);
+  padding: 32px 36px; border-radius: var(--radius);
+  margin: 40px 0;
+}
+.pull-quote p {
+  font-family: var(--font-display);
+  font-size: 22px; font-style: italic; font-weight: 500;
+  color: var(--accent); line-height: 1.4; letter-spacing: -0.01em;
+}
+
+/* ----- Two-column lists ----- */
+.list-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px; margin-top: 24px;
+}
+@media (max-width: 600px) { .list-grid { grid-template-columns: 1fr; } }
+
+.list-block h4 {
+  font-family: var(--font-display);
+  font-size: 16px; color: var(--success);
+  margin-bottom: 12px; font-weight: 600; letter-spacing: -0.01em;
+}
+.list-block ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.list-block li {
+  font-size: 15px; color: var(--text);
+  padding-left: 20px; position: relative;
+}
+.list-block li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--success); font-weight: 600;
+}
+
+/* ----- Testimonials ----- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; margin-top: 24px;
+}
+.testimonial {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex; flex-direction: column;
+}
+.testimonial-quote {
+  font-size: 15px; color: var(--text);
+  line-height: 1.65; margin-bottom: 18px; flex: 1;
+}
+.testimonial-quote::before {
+  content: '"'; font-family: var(--font-display);
+  font-size: 38px; line-height: 0; vertical-align: -0.4em;
+  color: var(--success); margin-right: 4px;
+}
+.testimonial-author {
+  font-weight: 600; color: var(--text); font-size: 14px;
+}
+.testimonial-role {
+  font-size: 13px; color: var(--text-muted); margin-top: 2px;
+}
+
+/* ----- Writing list ----- */
+.writing-list { display: flex; flex-direction: column; gap: 4px; }
+.writing-item {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 24px; align-items: baseline;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-soft);
+  transition: padding 0.2s;
+}
+.writing-item:hover { padding-left: 8px; }
+.writing-item:last-child { border-bottom: none; }
+.writing-date {
+  font-size: 13px; color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.writing-title {
+  font-family: var(--font-display);
+  font-size: 21px; font-weight: 600;
+  color: var(--text); letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.writing-arrow {
+  color: var(--success); font-size: 20px;
+  transition: transform 0.2s;
+}
+.writing-item:hover .writing-arrow { transform: translateX(6px); }
+
+@media (max-width: 600px) {
+  .writing-item { grid-template-columns: 1fr auto; gap: 12px; }
+  .writing-date { grid-column: 1 / -1; }
+}
+
+/* ----- Article (case study deep dive / writing) ----- */
+.article {
+  background: var(--surface);
+  padding: 60px 0;
+}
+.article-header {
+  padding: 80px 0 40px;
+  border-bottom: 1px solid var(--border-soft);
+  background: var(--surface);
+}
+.article-meta {
+  display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success);
+}
+.article-meta span:not(:last-child)::after {
+  content: '·'; margin-left: 8px; color: var(--text-muted);
+}
+.article-title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 500; line-height: 1.05;
+  letter-spacing: -0.025em; margin-bottom: 16px;
+}
+.article-deck {
+  font-size: 19px; color: var(--text-muted);
+  line-height: 1.55; max-width: 680px;
+}
+
+.article-body { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 30px; font-weight: 600;
+  margin-top: 48px; margin-bottom: 16px;
+  color: var(--accent); letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  margin-top: 32px; margin-bottom: 12px;
+  color: var(--success); letter-spacing: -0.01em;
+}
+.article-body p {
+  font-size: 17.5px; line-height: 1.75;
+  color: var(--text); margin-bottom: 18px;
+}
+.article-body p strong { color: var(--accent); font-weight: 600; }
+.article-body ul, .article-body ol {
+  margin: 0 0 24px 24px; padding-left: 8px;
+}
+.article-body li {
+  font-size: 17px; line-height: 1.7;
+  color: var(--text); margin-bottom: 8px;
+}
+.article-body blockquote {
+  border-left: 3px solid var(--success);
+  padding: 4px 0 4px 24px;
+  margin: 32px 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 21px; color: var(--accent);
+  line-height: 1.45;
+}
+.article-body img {
+  border-radius: var(--radius);
+  margin: 32px 0;
+  box-shadow: var(--shadow);
+}
+.article-body figure { margin: 32px 0; }
+.article-body figcaption {
+  font-size: 14px; color: var(--text-muted);
+  text-align: center; margin-top: 12px;
+  font-style: italic;
+}
+.article-body hr {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 48px 0;
+}
+
+/* Key takeaway / callout */
+.callout {
+  background: var(--bg);
+  border-left: 4px solid var(--success);
+  padding: 24px 28px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 32px 0;
+}
+.callout-label {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 6px;
+}
+.callout p { font-size: 16px !important; margin-bottom: 0 !important; }
+
+/* Article navigation */
+.article-nav {
+  background: var(--bg);
+  padding: 60px 0; margin-top: 0;
+}
+.article-nav-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 600px) {
+  .article-nav-grid { grid-template-columns: 1fr; }
+}
+.article-nav-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: all 0.25s;
+}
+.article-nav-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--border);
+}
+.article-nav-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 8px;
+}
+.article-nav-title {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 600;
+  color: var(--text); line-height: 1.3;
+}
+
+/* ----- Contact section (deep navy) ----- */
+.contact {
+  background: var(--contact-bg);
+  color: white; padding: 90px 0;
+  margin-top: 80px;
+  position: relative; overflow: hidden;
+}
+.contact::before {
+  content: ''; position: absolute;
+  top: -100px; right: -100px;
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(0, 95, 115, 0.45) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+.contact-inner { position: relative; z-index: 1; }
+.contact .section-eyebrow { color: #83c5be; }
+.contact .section-title { color: white; }
+.contact-sub {
+  font-size: 18px; color: rgba(255, 255, 255, 0.75);
+  max-width: 600px; margin-bottom: 40px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; margin-bottom: 40px;
+}
+.contact-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 22px; transition: all 0.2s;
+}
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #83c5be;
+  transform: translateY(-2px);
+}
+.contact-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: #83c5be; margin-bottom: 8px;
+}
+.contact-value {
+  font-size: 16px; color: white;
+  font-weight: 500; word-break: break-word;
+}
+.contact-cta {
+  background: #83c5be; color: var(--accent);
+  padding: 16px 32px;
+}
+.contact-cta:hover { background: white; color: var(--accent); }
+
+/* ----- Footer ----- */
+footer {
+  padding: 32px 0; text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
+
+/* ----- Responsive nav ----- */
+@media (max-width: 640px) {
+  .nav-links { gap: 18px; }
+  .nav-links a { font-size: 14px; }
+  .hero { padding: 60px 0 50px; }
+  section { padding: 56px 0; }
+  .exp-card { padding: 24px; }
+  .case-body { padding: 22px; }
+  .stats-strip { padding: 24px; gap: 20px; }
+  .stat-num { font-size: 34px; }
+}
+
+/* ----- Animations ----- */
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0; transform: translateY(20px);
+}
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Eniola<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="case-studies.html" class="active">Work</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="about-hero" style="padding: 80px 0 40px;">
+    <div class="container">
+      <div class="section-eyebrow">Selected Work &middot; 2019 &ndash; 2026</div>
+      <h2 class="section-title" style="font-size: clamp(34px, 5vw, 56px);">My work in detail.</h2>
+      <p class="section-sub">
+        I selected seven projects across SaaS, fintech, gaming, e-commerce, healthcare,
+        and design. They reflect a mix of my work experience and case studies. Each project
+        tells the story of a specific product challenge, covering the problem, my approach,
+        and the measurable impact.
+      </p>
+    </div>
+  </section>
+
+  <section style="padding-top: 0;">
+    <div class="container">
+      <div class="case-grid">
+
+        <!-- PocketApp — Featured -->
+        <a href="work/pocketapp/index.html" class="case-card featured" style="text-decoration: none;">
+          <div class="case-thumb case-thumb-abeg">
+            <div class="case-thumb-text">PocketApp<small>Consumer Fintech &middot; 2019 &ndash; 2025</small></div>
+          </div>
+          <div class="case-body">
+            <div class="featured-tag">&starf; Recommended</div>
+            <div class="case-meta">
+              <span class="case-meta-tag">Consumer Fintech</span>
+              <span class="case-meta-tag divider">Lead PM</span>
+              <span class="case-meta-tag divider">2019 &ndash; 2025</span>
+            </div>
+            <h3 class="case-title">PocketApp</h3>
+            <p class="case-desc">
+              Six years of building and shipping quality products to over 2.5M users.
+              A closer look at the product I co-founded and scaled from zero to 2.5M users
+              alongside a cross-functional team.
+            </p>
+            <span class="case-link">Read the full story <span>&rarr;</span></span>
+          </div>
+        </a>
+
+        <a href="work/fintech-analysis/index.html" class="case-card" style="text-decoration: none;">
+          <div class="case-thumb case-thumb-fintech">
+            <div class="case-thumb-text">Fintech<small>Competitive Analysis</small></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-meta-tag">Fintech</span>
+              <span class="case-meta-tag divider">Case Study</span>
+            </div>
+            <h3 class="case-title">Competitive Analysis on Fintech</h3>
+            <p class="case-desc">
+              A deep teardown of seven Nigerian fintechs across 25+ feature dimensions, their feature
+              gaps, user pain points and where the opportunity in fintech lies.
+            </p>
+            <span class="case-link">Read more <span>&rarr;</span></span>
+          </div>
+        </a>
+
+        <a href="work/fiberone/index.html" class="case-card" style="text-decoration: none;">
+          <div class="case-thumb case-thumb-fiber">
+            <img src="Portfolio-Images/Fiber-preview.png" alt="FiberOne preview" />
+            <div class="case-thumb-text"><small>Mobile + Web Redesign</small></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-meta-tag">Mobile + Web Redesign</span>
+              <span class="case-meta-tag divider">Fiber-optic ISP</span>
+            </div>
+            <h3 class="case-title">FiberOne Broadband</h3>
+            <p class="case-desc">
+              A redesign of the platform to fix the problems I and my colleagues personally experienced.
+              I fixed the issues with the UX and navigation, subscription renewal friction, and
+              redesigned the customer service flow.
+            </p>
+            <span class="case-link">Read more <span>&rarr;</span></span>
+          </div>
+        </a>
+
+        <a href="work/smartgames/index.html" class="case-card" style="text-decoration: none;">
+          <div class="case-thumb case-thumb-fintech">
+            <img src="Portfolio-Images/SMG-billing.jpg" alt="Smart Games preview" />
+            <div class="case-thumb-text"><small>Gaming Platform</small></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-meta-tag">Gaming</span>
+              <span class="case-meta-tag divider">Web Platform</span>
+            </div>
+            <h3 class="case-title">Smart Games</h3>
+            <p class="case-desc">
+              Player and admin-facing flows and UI/UX for a US-based gaming and marketing platform:
+              including custom games, coupons and payments.
+            </p>
+            <span class="case-link">Read more <span>&rarr;</span></span>
+          </div>
+        </a>
+
+        <a href="work/hrmp/index.html" class="case-card" style="text-decoration: none;">
+          <div class="case-thumb case-thumb-gaming">
+            <img src="Portfolio-Images/HRMP-preview.png" alt="HRMP preview" />
+            <div class="case-thumb-text"><small>Design Case Study</small></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-meta-tag">Enterprise SaaS</span>
+              <span class="case-meta-tag divider">Case Study</span>
+            </div>
+            <h3 class="case-title">Human Resource Management Platform</h3>
+            <p class="case-desc">
+              HR platform design to simplify processes including team management, directories,
+              recruitment, and leave workflows.
+            </p>
+            <span class="case-link">Read more <span>&rarr;</span></span>
+          </div>
+        </a>
+
+        <a href="work/pethmo/index.html" class="case-card" style="text-decoration: none;">
+          <div class="case-thumb" style="background: linear-gradient(135deg, #064045, #005f73);">
+            <img src="Portfolio-Images/Pet-preview.png" alt="Pet Care preview" />
+            <div class="case-thumb-text"><small>Health Insurance</small></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-meta-tag">Health Insurance</span>
+              <span class="case-meta-tag divider">Case Study</span>
+            </div>
+            <h3 class="case-title">Reliance Pet Care</h3>
+            <p class="case-desc">
+              A pet insurance product line for an existing HMO. A case study including strategy,
+              roadmap, prioritisation, and go-to-market.
+            </p>
+            <span class="case-link">Read more <span>&rarr;</span></span>
+          </div>
+        </a>
+
+        <a href="work/jumia/index.html" class="case-card" style="text-decoration: none;">
+          <div class="case-thumb" style="background: linear-gradient(135deg, #06807d, #064045);">
+            <img src="Portfolio-Images/Jumia-preview.png" alt="Jumia Food preview" />
+            <div class="case-thumb-text"><small>E-commerce</small></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-meta-tag">E-commerce</span>
+              <span class="case-meta-tag divider">Case Study</span>
+            </div>
+            <h3 class="case-title">Jumia Food</h3>
+            <p class="case-desc">
+              A case study on an e-commerce platform and the introduction to a new product
+              "OrderMore" &mdash; a more convenient food ordering process.
+            </p>
+            <span class="case-link">Read more <span>&rarr;</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+<!-- Reviews -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-eyebrow">Reviews</div>
+      <h2 class="section-title">What people say</h2>
+
+      <div class="testimonials">
+        <div class="testimonial">
+            <div class="testimonial-quote">Eniola is an exceptional leader with a great eye for both product, design, and engineering details. Her ability to identify gaps, improve experiences, and think deeply about product and design consistently elevated the quality of the product. I learned a great deal from working with her, especially around product, design thinking and execution. The product is significantly better because of the impact and care she brought to the team throughout the journey.”</div>
+            <div class="testimonial-author">Engineering Manager</div>
+            <div class="testimonial-role">PocketApp</div>
+        </div>
+
+        <div class="testimonial">
+            <div class="testimonial-quote">She is naturally curious and consistently identifies opportunities to improve both business operations and customer experience. Eniola pays close attention to detail and brings a great, thoughtful, and improvement driven mindset to her work and the team.”</div>
+            <div class="testimonial-author">Head of HR</div>
+            <div class="testimonial-role">Dangote</div> 
+             </div>
+
+        <div class="testimonial">
+            <div class="testimonial-quote">From creating relatable, engaging content for users to leading product and customer success, she brought clarity and structure to every part of the experience. Enny transformed customer success into one of our strongest product feedback loops, we shipped better products because of how intentionally she connected customer insights back to the team. She was also consistently supportive, always willing to guide and help members of the team grow.”</div>
+            <div class="testimonial-author">Co-Founder</div>
+            <div class="testimonial-role">Abeg App</div>
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="section-title">Want to talk about a role?</h2>
+      <p class="contact-sub">
+        I'm happy to walk through any of these in more detail. Email is fastest.
+      </p>
+      <div class="contact-grid">
+        <a href="mailto:enny.teekay@gmail.com" class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">enny.teekay@gmail.com</div>
+        </a>
+        <a href="https://dribbble.com/EnnyTeekay" class="contact-item" target="_blank" rel="noopener">
+          <div class="contact-label">Dribbble</div>
+          <div class="contact-value">dribbble.com/EnnyTeekay</div>
+        </a>
+        <a href="https://linkedin.com/in/eniolaajayi-bembe" class="contact-item" target="_blank" rel="noopener">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">/in/eniolaajayi-bembe</div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-label">Open To</div>
+          <div class="contact-value">Remote &middot; Relocation &middot; Hybrid</div>
+        </div>
+      </div>
+      <a href="mailto:enny.teekay@gmail.com" class="btn contact-cta">
+        Send me a message <span class="btn-arrow">&rarr;</span>
+      </a>
+    </div>
+    <footer>
+      <div class="container">
+        &copy; 2026 Eniola Ajayi-Bembe &middot; Built with <span aria-label="green heart" style="color:#83c5be;">&#9829;</span>
+      </div>
+    </footer>
+  </section>
+
+</body>
+</html>

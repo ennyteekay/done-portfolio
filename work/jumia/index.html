@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jumia Food &mdash; Eniola Ajayi-Bembe</title>
+  <meta name="description" content="A case study introducing OrderMore — multi-restaurant ordering, PRD, personas, MoSCoW prioritisation, and a go-to-market plan." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23163066'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='%237BA7F5' font-family='system-ui' font-size='18' font-weight='700'%3EE%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,30..100,0..1;1,9..144,400..700,30..100,0..1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+/* ============================================
+   ENIOLA AJAYI-BEMBE — Portfolio
+   Senior Product Manager · SaaS / Tech
+   Palette: edf6f9 / 83c5be / 06807d / 005f73
+   ============================================ */
+
+:root {
+  --bg:            #edf6f9;
+  --surface:       #ffffff;
+  --border:        #83c5be;
+  --border-soft:   #c8e3df;
+  --text:          #0a0a0a;
+  --text-muted:    #525252;
+  --accent:        #06807d;
+  --accent-hover:  #064045;
+  --success:       #005f73;
+  --contact-bg:    #1d3557;
+
+  --radius-sm: 8px;
+  --radius:    14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 1px 2px rgba(29, 53, 87, 0.06);
+  --shadow:    0 8px 24px rgba(29, 53, 87, 0.08);
+  --shadow-lg: 0 20px 50px rgba(29, 53, 87, 0.12);
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ----- Layout ----- */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.container-narrow { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+/* ----- Navigation ----- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(237, 246, 249, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; max-width: 1100px; margin: 0 auto;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+.nav-brand span { color: var(--success); }
+
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+.nav-links a {
+  font-size: 15px; font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s; position: relative;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active { color: var(--accent); }
+.nav-links a.active::after {
+  content: ''; position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px; background: var(--success); border-radius: 2px;
+}
+
+/* ----- Hero ----- */
+.hero { padding: 100px 0 60px; position: relative; overflow: hidden; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 24px;
+}
+.hero-eyebrow::before {
+  content: ''; width: 8px; height: 8px;
+  background: var(--success); border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 7vw, 84px);
+  font-weight: 500; line-height: 1.02;
+  letter-spacing: -0.03em; color: var(--text);
+  margin-bottom: 28px;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+}
+.hero h1 em {
+  font-style: italic;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 19px; color: var(--text-muted);
+  max-width: 640px; margin-bottom: 36px; line-height: 1.55;
+}
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 26px; border-radius: 999px;
+  font-size: 15px; font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer; border: none;
+  transition: all 0.2s ease; white-space: nowrap;
+}
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover {
+  background: var(--accent-hover); transform: translateY(-1px); box-shadow: var(--shadow);
+}
+.btn-secondary {
+  background: var(--surface); color: var(--accent); border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: var(--border); color: var(--accent); }
+
+.btn-tertiary {
+  background: transparent; color: var(--accent); padding: 14px 4px;
+  border-bottom: 1px solid transparent; border-radius: 0;
+}
+.btn-tertiary:hover { border-bottom-color: var(--accent); }
+
+.btn-arrow { transition: transform 0.2s; }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+/* ----- Sections ----- */
+section { padding: 80px 0; }
+
+.section-eyebrow {
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 500; line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text); margin-bottom: 16px;
+}
+.section-sub {
+  font-size: 18px; color: var(--text-muted);
+  max-width: 640px; margin-bottom: 48px;
+}
+
+/* ----- Stats strip ----- */
+.stats-strip {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px; background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 36px; margin: 40px 0;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 44px; font-weight: 600;
+  color: var(--accent); line-height: 1;
+  letter-spacing: -0.03em; margin-bottom: 6px;
+}
+.stat-label {
+  font-size: 13.5px; color: var(--text-muted); font-weight: 500;
+}
+
+/* ----- Industries grid ----- */
+.industries {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.industry {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: all 0.2s;
+}
+.industry:hover {
+  border-color: var(--border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.industry-name {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 600;
+  color: var(--accent); margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.industry-why {
+  font-size: 14.5px; color: var(--text-muted); line-height: 1.6;
+}
+
+/* ----- Experience ----- */
+.experience-grid { display: flex; flex-direction: column; gap: 20px; }
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: all 0.25s ease;
+}
+.exp-card:hover {
+  border-color: var(--border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.exp-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 8px; gap: 16px; flex-wrap: wrap;
+}
+.exp-role {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  color: var(--text); letter-spacing: -0.01em;
+}
+.exp-date {
+  font-size: 13px; color: var(--text-muted);
+  background: var(--bg); padding: 6px 12px;
+  border-radius: 999px; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.exp-company {
+  font-size: 15px; color: var(--success);
+  font-weight: 500; margin-bottom: 16px;
+}
+.exp-summary {
+  color: var(--text-muted);
+  font-size: 15.5px; line-height: 1.7;
+}
+.exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.exp-tag {
+  font-size: 12.5px; font-weight: 500;
+  background: var(--bg); color: var(--accent);
+  padding: 5px 12px; border-radius: 999px;
+  border: 1px solid var(--border-soft);
+}
+
+/* ----- Skills ----- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.skill-group {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 26px;
+}
+.skill-group h3 {
+  font-family: var(--font-display);
+  font-size: 17px; font-weight: 600;
+  color: var(--accent); margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+.skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-pill {
+  font-size: 13px; font-weight: 500;
+  color: var(--text); background: var(--bg);
+  padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--border-soft);
+}
+
+/* ----- Case study cards ----- */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.case-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex; flex-direction: column;
+}
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border);
+}
+
+.case-thumb {
+  aspect-ratio: 16 / 10;
+  background: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+.case-thumb img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.case-card:hover .case-thumb img { transform: scale(1.04); }
+
+/* Gradient placeholder thumbs (for cases without screenshots) */
+.case-thumb-fintech { background: linear-gradient(135deg, #06807d 0%, #064045 100%); }
+.case-thumb-gaming { background: linear-gradient(135deg, #005f73 0%, #1d3557 100%); }
+.case-thumb-fiber { background: linear-gradient(135deg, #064045 0%, #005f73 100%); }
+.case-thumb-zairaa { background: linear-gradient(135deg, #005f73 0%, #064045 100%); }
+.case-thumb-abeg { background: linear-gradient(135deg, #06807d 0%, #1d3557 100%); }
+
+.case-thumb-text {
+  font-family: var(--font-display);
+  font-size: 36px; font-weight: 600;
+  color: white; letter-spacing: -0.02em;
+  text-align: center; padding: 20px;
+}
+.case-thumb-text small {
+  display: block; font-family: var(--font-body);
+  font-size: 13px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-top: 10px; opacity: 0.7;
+}
+
+.case-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+
+.case-meta {
+  display: flex; gap: 8px;
+  margin-bottom: 14px; flex-wrap: wrap;
+}
+.case-meta-tag {
+  font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--success);
+}
+.case-meta-tag.divider::before {
+  content: '·'; margin-right: 8px; color: var(--text-muted);
+}
+
+.case-title {
+  font-family: var(--font-display);
+  font-size: 24px; font-weight: 600;
+  color: var(--text); margin-bottom: 12px;
+  line-height: 1.2; letter-spacing: -0.01em;
+}
+.case-desc {
+  color: var(--text-muted);
+  font-size: 15px; line-height: 1.6;
+  margin-bottom: 20px; flex: 1;
+}
+.case-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--accent); font-weight: 600;
+  font-size: 14.5px; align-self: flex-start;
+  transition: gap 0.2s;
+}
+.case-link:hover { gap: 10px; color: var(--success); }
+
+/* "Featured" highlight on flagship card */
+.case-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: stretch;
+}
+.case-card.featured .case-thumb { aspect-ratio: auto; }
+.case-card.featured .case-body { padding: 44px; justify-content: center; }
+.case-card.featured .case-title { font-size: 32px; }
+.case-card.featured .case-desc { font-size: 16px; }
+
+@media (max-width: 768px) {
+  .case-card.featured { grid-template-columns: 1fr; }
+  .case-card.featured .case-body { padding: 28px; }
+}
+
+.featured-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11.5px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: white; background: var(--success);
+  padding: 4px 10px; border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+/* ----- About ----- */
+.about-hero { padding: 80px 0 40px; }
+
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 60px; align-items: start;
+}
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.about-portrait {
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--success) 100%);
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 96px; font-weight: 600;
+  color: white; letter-spacing: -0.02em;
+  position: relative; overflow: hidden;
+}
+.about-portrait::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 50%);
+}
+
+.about-text p {
+  font-size: 17px; color: var(--text);
+  line-height: 1.75; margin-bottom: 20px;
+}
+.about-text p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 60px; font-weight: 600;
+  float: left; line-height: 0.9;
+  margin: 6px 12px 0 0; color: var(--accent);
+}
+
+/* ----- Pull quote ----- */
+.pull-quote {
+  background: var(--surface);
+  border-left: 4px solid var(--success);
+  padding: 32px 36px; border-radius: var(--radius);
+  margin: 40px 0;
+}
+.pull-quote p {
+  font-family: var(--font-display);
+  font-size: 22px; font-style: italic; font-weight: 500;
+  color: var(--accent); line-height: 1.4; letter-spacing: -0.01em;
+}
+
+/* ----- Two-column lists ----- */
+.list-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px; margin-top: 24px;
+}
+@media (max-width: 600px) { .list-grid { grid-template-columns: 1fr; } }
+
+.list-block h4 {
+  font-family: var(--font-display);
+  font-size: 16px; color: var(--success);
+  margin-bottom: 12px; font-weight: 600; letter-spacing: -0.01em;
+}
+.list-block ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.list-block li {
+  font-size: 15px; color: var(--text);
+  padding-left: 20px; position: relative;
+}
+.list-block li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--success); font-weight: 600;
+}
+
+/* ----- Testimonials ----- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; margin-top: 24px;
+}
+.testimonial {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex; flex-direction: column;
+}
+.testimonial-quote {
+  font-size: 15px; color: var(--text);
+  line-height: 1.65; margin-bottom: 18px; flex: 1;
+}
+.testimonial-quote::before {
+  content: '"'; font-family: var(--font-display);
+  font-size: 38px; line-height: 0; vertical-align: -0.4em;
+  color: var(--success); margin-right: 4px;
+}
+.testimonial-author {
+  font-weight: 600; color: var(--text); font-size: 14px;
+}
+.testimonial-role {
+  font-size: 13px; color: var(--text-muted); margin-top: 2px;
+}
+
+/* ----- Writing list ----- */
+.writing-list { display: flex; flex-direction: column; gap: 4px; }
+.writing-item {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 24px; align-items: baseline;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-soft);
+  transition: padding 0.2s;
+}
+.writing-item:hover { padding-left: 8px; }
+.writing-item:last-child { border-bottom: none; }
+.writing-date {
+  font-size: 13px; color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.writing-title {
+  font-family: var(--font-display);
+  font-size: 21px; font-weight: 600;
+  color: var(--text); letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.writing-arrow {
+  color: var(--success); font-size: 20px;
+  transition: transform 0.2s;
+}
+.writing-item:hover .writing-arrow { transform: translateX(6px); }
+
+@media (max-width: 600px) {
+  .writing-item { grid-template-columns: 1fr auto; gap: 12px; }
+  .writing-date { grid-column: 1 / -1; }
+}
+
+/* ----- Article (case study deep dive / writing) ----- */
+.article {
+  background: var(--surface);
+  padding: 60px 0;
+}
+.article-header {
+  padding: 80px 0 40px;
+  border-bottom: 1px solid var(--border-soft);
+  background: var(--surface);
+}
+.article-meta {
+  display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success);
+}
+.article-meta span:not(:last-child)::after {
+  content: '·'; margin-left: 8px; color: var(--text-muted);
+}
+.article-title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 500; line-height: 1.05;
+  letter-spacing: -0.025em; margin-bottom: 16px;
+}
+.article-deck {
+  font-size: 19px; color: var(--text-muted);
+  line-height: 1.55; max-width: 680px;
+}
+
+.article-body { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 30px; font-weight: 600;
+  margin-top: 48px; margin-bottom: 16px;
+  color: var(--accent); letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  margin-top: 32px; margin-bottom: 12px;
+  color: var(--success); letter-spacing: -0.01em;
+}
+.article-body p {
+  font-size: 17.5px; line-height: 1.75;
+  color: var(--text); margin-bottom: 18px;
+}
+.article-body p strong { color: var(--accent); font-weight: 600; }
+.article-body ul, .article-body ol {
+  margin: 0 0 24px 24px; padding-left: 8px;
+}
+.article-body li {
+  font-size: 17px; line-height: 1.7;
+  color: var(--text); margin-bottom: 8px;
+}
+.article-body blockquote {
+  border-left: 3px solid var(--success);
+  padding: 4px 0 4px 24px;
+  margin: 32px 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 21px; color: var(--accent);
+  line-height: 1.45;
+}
+.article-body img {
+  border-radius: var(--radius);
+  margin: 32px 0;
+  box-shadow: var(--shadow);
+}
+.article-body figure { margin: 32px 0; }
+.article-body figcaption {
+  font-size: 14px; color: var(--text-muted);
+  text-align: center; margin-top: 12px;
+  font-style: italic;
+}
+.article-body hr {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 48px 0;
+}
+
+/* Key takeaway / callout */
+.callout {
+  background: var(--bg);
+  border-left: 4px solid var(--success);
+  padding: 24px 28px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 32px 0;
+}
+.callout-label {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 6px;
+}
+.callout p { font-size: 16px !important; margin-bottom: 0 !important; }
+
+/* Article navigation */
+.article-nav {
+  background: var(--bg);
+  padding: 60px 0; margin-top: 0;
+}
+.article-nav-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 600px) {
+  .article-nav-grid { grid-template-columns: 1fr; }
+}
+.article-nav-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: all 0.25s;
+}
+.article-nav-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--border);
+}
+.article-nav-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 8px;
+}
+.article-nav-title {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 600;
+  color: var(--text); line-height: 1.3;
+}
+
+/* ----- Contact section (deep navy) ----- */
+.contact {
+  background: var(--contact-bg);
+  color: white; padding: 90px 0;
+  margin-top: 80px;
+  position: relative; overflow: hidden;
+}
+.contact::before {
+  content: ''; position: absolute;
+  top: -100px; right: -100px;
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(0, 95, 115, 0.45) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+.contact-inner { position: relative; z-index: 1; }
+.contact .section-eyebrow { color: #83c5be; }
+.contact .section-title { color: white; }
+.contact-sub {
+  font-size: 18px; color: rgba(255, 255, 255, 0.75);
+  max-width: 600px; margin-bottom: 40px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; margin-bottom: 40px;
+}
+.contact-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 22px; transition: all 0.2s;
+}
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #83c5be;
+  transform: translateY(-2px);
+}
+.contact-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: #83c5be; margin-bottom: 8px;
+}
+.contact-value {
+  font-size: 16px; color: white;
+  font-weight: 500; word-break: break-word;
+}
+.contact-cta {
+  background: #83c5be; color: var(--accent);
+  padding: 16px 32px;
+}
+.contact-cta:hover { background: white; color: var(--accent); }
+
+/* ----- Footer ----- */
+footer {
+  padding: 32px 0; text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
+
+/* ----- Responsive nav ----- */
+@media (max-width: 640px) {
+  .nav-links { gap: 18px; }
+  .nav-links a { font-size: 14px; }
+  .hero { padding: 60px 0 50px; }
+  section { padding: 56px 0; }
+  .exp-card { padding: 24px; }
+  .case-body { padding: 22px; }
+  .stats-strip { padding: 24px; gap: 20px; }
+  .stat-num { font-size: 34px; }
+}
+
+/* ----- Animations ----- */
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0; transform: translateY(20px);
+}
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+
+
+/* ----- Case study specifics ----- */
+.reviews-section {
+  background: var(--bg);
+  padding: 80px 0;
+  border-top: 1px solid var(--border-soft);
+}
+.reviews-section .section-eyebrow { margin-bottom: 8px; }
+.reviews-section .section-title { margin-bottom: 40px; }
+
+/* Article cover image */
+.article-cover {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  margin: 24px 0 40px;
+  box-shadow: var(--shadow);
+}
+
+/* Approach / Learning cards (grid of insights) */
+.insight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin: 24px 0 32px;
+}
+.insight-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 26px;
+  transition: all 0.25s ease;
+}
+.insight-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border);
+  box-shadow: var(--shadow);
+}
+.insight-card h4 {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.insight-card p {
+  font-size: 15px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.65 !important;
+  margin-bottom: 0 !important;
+}
+.insight-card .insight-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px; height: 32px;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-weight: 600; font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.goal-metrics-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin: 24px 0 32px;
+}
+.goal-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.goal-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--border);
+  box-shadow: var(--shadow);
+}
+.goal-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.goal-index {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+.goal-card h4 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.35;
+}
+.goal-card p {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  line-height: 1.75;
+}
+.goal-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.goal-metrics span {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+/* Project image gallery rows */
+.image-figure {
+  margin: 36px 0;
+}
+.image-figure img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 0;
+}
+.image-figure figcaption {
+  font-size: 14px;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 14px;
+  font-style: italic;
+}
+
+.image-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 36px 0;
+}
+.image-grid-2 img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .image-grid-2 { grid-template-columns: 1fr; }
+}
+
+/* Personas (used in Jumia) */
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin: 24px 0 32px;
+}
+.persona-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.persona-card .persona-header {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.persona-card .persona-meta {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.persona-card p {
+  font-size: 15px !important;
+  color: var(--text-muted) !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important;
+}
+
+/* External link callout (e.g. Google Doc link) */
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: white !important;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 16px 0;
+  transition: all 0.2s ease;
+  text-decoration: none !important;
+}
+.external-link:hover {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../../index.html" class="nav-brand">Eniola<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../case-studies.html" class="active">Work</a></li>
+        <li><a href="../../about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="article-meta">
+        <span>E-commerce</span>
+        <span>Case Study</span>
+        <span>OrderMore</span>
+      </div>
+      <h1 class="article-title">A Multi-restaurant Ordering Feature</h1>
+      <p class="article-deck">
+        A case study on an e-commerce platform and the introduction of a new product, "OrderMore" is
+        a more convenient food ordering process that lets users order from multiple restaurants in one
+        delivery.
+      </p>
+    </div>
+  </header>
+
+  <article class="article-body">
+
+    <h2>The Context</h2>
+    <p>
+      Jumia Food is the most convenient online food ordering site in Nigeria. The feature I scoped,
+      <strong>OrderMore</strong>, addresses a specific user pain: the inability to order from multiple
+      restaurants in a single delivery.
+    </p>
+    <p>
+      Today, users who want food from two restaurants pay two delivery fees, wait for two agents, and
+      answer two security gates. OrderMore consolidates that into one cart, one delivery, and one
+      experience.
+    </p>
+
+    <h2>Problem Statement</h2>
+
+    <h3>The user pain</h3>
+    <p>
+      Jumia Food users want the ability to order items from multiple restaurants within a single
+      checkout and delivery flow. The current one restaurant per-order limitation increases delivery
+      costs, creates unnecessary friction, and reduces convenience for users ordering from different
+      vendors at the same time.
+    </p>
+
+    <h3>What customers actually needed</h3>
+    <p>A flow that respects how people actually order food.</p>
+
+    <div class="image-grid-2">
+      <img src="../../images/jumia2.jpg" alt="Jumia Food existing flow" />
+      <img src="../../images/jumiapersonas.jpg" alt="Jumia Food OrderMore multi-restaurant cart" />
+    </div>
+
+    <p>
+      People rarely want one thing. They want sushi from one place, dessert from another, and the
+      office order assembled across three restaurants their colleagues actually like. Forcing them into
+      single restaurant orders is a category wide failure to listen to how food gets ordered in real
+      life.
+    </p>
+
+    <h2>Personas</h2>
+
+    <div class="persona-grid">
+      <div class="persona-card">
+        <div class="persona-header">Fay</div>
+        <div class="persona-meta">24 &middot; Customer Success Manager</div>
+        <p>Fay doesn't skip meals and loves to snack between meals while she's at the office. She prefers options and not eating the same things over and over again. She hasn't used Jumia Food in over four months, she's frustrated with placing multiple separate orders, paying more on delivery, and the plating system.</p>
+      </div>
+      <div class="persona-card">
+        <div class="persona-header">Barakat</div>
+        <div class="persona-meta">31 &middot; Backend Engineer</div>
+        <p>Barakat eats twice daily and drinks a lot of coffee while working from home. He's too busy to cook so he orders daily. He likes Jumia Food because of the multiple restaurants, but gets tired of calling his estate gate to let multiple delivery agents in because Jumia won't deliver everything in one order.</p>
+      </div>
+    </div>
+
+    <h2>Goals &amp; Metrics</h2>
+    <h3>Three goals. Three measurement systems.</h3>
+
+    <div class="goal-metrics-grid">
+      <article class="goal-card">
+        <div class="goal-card-header">
+          <span class="goal-index">01</span>
+          <h4>Enhance the ordering experience</h4>
+        </div>
+        <p>Build a multi-restaurant cart that makes checkout feel seamless and matches how people actually order food.</p>
+        <div class="goal-metrics">
+          <span>App downloads</span>
+          <span>New users</span>
+          <span>Active users</span>
+          <span>Retention rate</span>
+        </div>
+      </article>
+      <article class="goal-card">
+        <div class="goal-card-header">
+          <span class="goal-index">02</span>
+          <h4>Generate revenue through better service</h4>
+        </div>
+        <p>Improve satisfaction by reducing delivery friction and making every order feel faster, clearer, and more reliable.</p>
+        <div class="goal-metrics">
+          <span>Ratings &amp; reviews</span>
+          <span>CSAT</span>
+          <span>Retention rate</span>
+          <span>Total revenue</span>
+        </div>
+      </article>
+      <article class="goal-card">
+        <div class="goal-card-header">
+          <span class="goal-index">03</span>
+          <h4>Reduce cancellations and failed orders</h4>
+        </div>
+        <p>Keep restaurant inventory accurate and the delivery process smooth so orders complete successfully more often.</p>
+        <div class="goal-metrics">
+          <span>Placed orders</span>
+          <span>Delivered orders</span>
+          <span>Cancellations</span>
+        </div>
+      </article>
+    </div>
+
+    <h2>What Success Looks Like</h2>
+
+    <h3>The budget-conscious diner</h3>
+    <blockquote>
+      "As an average income earner who hates cooking but is on a budget, I want to compare prices and
+      deals from different restaurants close to me, and order my items all at once, so that I can save
+      some money."
+    </blockquote>
+    <p><strong>Acceptance:</strong> Users should be able to see different deal listings and compare prices.</p>
+
+    <h3>The remote worker</h3>
+    <blockquote>
+      "As a tech bro working from home who loves food, I want to order from my favourite restaurants and
+      have it all delivered at once, so I can save time on ordering multiple times, eat a variety
+      of meals I love, and avoid cooking after a long day."
+    </blockquote>
+    <p><strong>Acceptance:</strong> Users should be able to make multiple food orders from all their favourite restaurants and have them delivered at once.</p>
+
+    <h2>Go-to-Market</h2>
+    <h3>Reaching the right users through the right channels.</h3>
+
+    <h3>Target audience</h3>
+    <ul>
+      <li><strong>Primary audience:</strong> Gen Z and Millennial professionals (19&ndash;38)</li>
+      <li><strong>Secondary audience:</strong> Older working professionals (28&ndash;55)</li>
+      <li><strong>Core demographics:</strong> Tech-savvy individuals, students, and busy professionals who value convenience and flexible ordering experiences.</li>
+    </ul>
+
+    <h3>Distribution channels</h3>
+    <ul>
+      <li><strong>Social media:</strong> Paid campaigns and organic content across posts, stories, and short-form video.</li>
+      <li><strong>Restaurant partnerships:</strong> Flyers, banners, and in-store promotion across participating restaurant locations.</li>
+      <li><strong>Email campaigns:</strong> Re-engagement messaging, order reminders, and feature awareness campaigns.</li>
+      <li><strong>In-app promotion:</strong> Targeted in-app visibility for users within the rollout market.</li>
+    </ul>
+
+    <h2>What I Learned</h2>
+
+    <div class="insight-grid">
+      <div class="insight-card">
+        <h4>The most valuable features are the ones that convert friction into reactivation</h4>
+        <p>Fay had stopped using Jumia Food for four months. OrderMore wasn't simply a convenience feature, it directly addressed the reason she left. The most impactful product opportunities are often the ones that turn an existing "no" back into a "yes."</p>
+      </div>
+      <div class="insight-card">
+        <h4>A PRD is a thinking framework before it becomes documentation</h4>
+        <p>Writing the PRD forced clarity around what truly belonged in the MVP, what could wait, and what wasn't worth pursuing at all. The document itself mattered, but the structured thinking behind it mattered more.</p>
+      </div>
+      <div class="insight-card">
+        <h4>GTM strategy should exist inside product thinking, not after it</h4>
+        <p>Audience, positioning, and distribution channels shouldn't be treated as separate from the feature itself. If a product team cannot clearly explain how a feature reaches and resonates with users, the product strategy is still incomplete.</p>
+      </div>
+    </div>
+
+  </article>
+
+
+  <!-- Next case study -->
+  <section class="article-nav">
+    <div class="container">
+      <div class="article-nav-grid">
+        <a href="../pethmo/index.html" class="article-nav-card">
+          <div class="article-nav-label">&larr; Previous</div>
+          <div class="article-nav-title">Reliance Pet Care</div>
+        </a>
+        <a href="../../case-studies.html" class="article-nav-card" style="text-align: right;">
+          <div class="article-nav-label">&rarr; All work</div>
+          <div class="article-nav-title">All work</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="section-title">Want to talk about a role?</h2>
+      <p class="contact-sub">
+        I'm happy to walk through any of these in more detail. Email is fastest.
+      </p>
+      <div class="contact-grid">
+        <a href="mailto:enny.teekay@gmail.com" class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">enny.teekay@gmail.com</div>
+        </a>
+        <a href="https://dribbble.com/EnnyTeekay" class="contact-item" target="_blank" rel="noopener">
+          <div class="contact-label">Dribbble</div>
+          <div class="contact-value">dribbble.com/EnnyTeekay</div>
+        </a>
+        <a href="https://linkedin.com/in/eniolaajayi-bembe" class="contact-item" target="_blank" rel="noopener">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">/in/eniolaajayi-bembe</div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-label">Open To</div>
+          <div class="contact-value">Remote &middot; Relocation &middot; Hybrid</div>
+        </div>
+      </div>
+      <a href="mailto:enny.teekay@gmail.com" class="btn contact-cta">
+        Send me a message <span class="btn-arrow">&rarr;</span>
+      </a>
+    </div>
+    <footer>
+      <div class="container">
+        &copy; 2026 Eniola Ajayi-Bembe &middot; Built with <span aria-label="green heart" style="color:#83c5be;">&#9829;</span>
+      </div>
+    </footer>
+  </section>
+
+</body>
+</html>

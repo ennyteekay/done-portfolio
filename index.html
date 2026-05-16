@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eniola Ajayi-Bembe — Product Manager</title>
+  <meta name="description" content="Product Manager with 7+ years shipping consumer and enterprise SaaS at scale. QA discipline, design fluency, and customer success experience built in." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..700,30..100,0..1;1,9..144,400..700,30..100,0..1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23163066'/%3E%3Ctext x='16' y='22' text-anchor='middle' fill='%237BA7F5' font-family='system-ui' font-size='18' font-weight='700'%3EE%3C/text%3E%3C/svg%3E" />
+  <style>
+/* ============================================
+   ENIOLA AJAYI-BEMBE — Portfolio
+   Senior Product Manager · SaaS / Tech
+   Palette: edf6f9 / 83c5be / 06807d / 005f73
+   ============================================ */
+
+:root {
+  --bg:            #edf6f9;
+  --surface:       #ffffff;
+  --border:        #83c5be;
+  --border-soft:   #c8e3df;
+  --text:          #0a0a0a;
+  --text-muted:    #525252;
+  --accent:        #06807d;
+  --accent-hover:  #064045;
+  --success:       #005f73;
+  --contact-bg:    #1d3557;
+
+  --radius-sm: 8px;
+  --radius:    14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 1px 2px rgba(29, 53, 87, 0.06);
+  --shadow:    0 8px 24px rgba(29, 53, 87, 0.08);
+  --shadow-lg: 0 20px 50px rgba(29, 53, 87, 0.12);
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body:    'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ----- Layout ----- */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.container-narrow { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+/* ----- Navigation ----- */
+.nav {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(237, 246, 249, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 24px; max-width: 1100px; margin: 0 auto;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+.nav-brand span { color: var(--success); }
+
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+.nav-links a {
+  font-size: 15px; font-weight: 500;
+  color: var(--text-muted);
+  transition: color 0.2s; position: relative;
+}
+.nav-links a:hover { color: var(--accent); }
+.nav-links a.active { color: var(--accent); }
+.nav-links a.active::after {
+  content: ''; position: absolute;
+  left: 0; right: 0; bottom: -6px;
+  height: 2px; background: var(--success); border-radius: 2px;
+}
+
+/* ----- Hero ----- */
+.hero { padding: 100px 0 60px; position: relative; overflow: hidden; }
+
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 24px;
+}
+.hero-eyebrow::before {
+  content: ''; width: 8px; height: 8px;
+  background: var(--success); border-radius: 50%;
+  display: inline-block;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.3); }
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(44px, 7vw, 84px);
+  font-weight: 500; line-height: 1.02;
+  letter-spacing: -0.03em; color: var(--text);
+  margin-bottom: 28px;
+  font-variation-settings: "SOFT" 30, "WONK" 1;
+}
+.hero h1 em {
+  font-style: italic;
+  font-variation-settings: "SOFT" 100, "WONK" 1;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 19px; color: var(--text-muted);
+  max-width: 640px; margin-bottom: 36px; line-height: 1.55;
+}
+
+.hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ----- Buttons ----- */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 26px; border-radius: 999px;
+  font-size: 15px; font-weight: 600;
+  font-family: var(--font-body);
+  cursor: pointer; border: none;
+  transition: all 0.2s ease; white-space: nowrap;
+}
+.btn-primary { background: var(--accent); color: white; }
+.btn-primary:hover {
+  background: var(--accent-hover); transform: translateY(-1px); box-shadow: var(--shadow);
+}
+.btn-secondary {
+  background: var(--surface); color: var(--accent); border: 1px solid var(--border);
+}
+.btn-secondary:hover { background: var(--border); color: var(--accent); }
+
+.btn-tertiary {
+  background: transparent; color: var(--accent); padding: 14px 4px;
+  border-bottom: 1px solid transparent; border-radius: 0;
+  transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+.btn-tertiary:hover,
+.btn-tertiary:active,
+.btn-tertiary:focus { color: var(--accent-hover); border-bottom-color: var(--accent-hover); }
+
+.btn-arrow { transition: transform 0.2s; }
+.btn:hover .btn-arrow { transform: translateX(3px); }
+
+/* ----- Sections ----- */
+section { padding: 80px 0; }
+
+.section-eyebrow {
+  font-size: 13px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 500; line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text); margin-bottom: 16px;
+}
+.section-sub {
+  font-size: 18px; color: var(--text-muted);
+  max-width: 640px; margin-bottom: 48px;
+}
+
+/* ----- Stats strip ----- */
+.stats-strip {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 32px; background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: 36px; margin: 40px 0;
+}
+.stat-item { text-align: center; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 44px; font-weight: 600;
+  color: var(--accent); line-height: 1;
+  letter-spacing: -0.03em; margin-bottom: 6px;
+}
+.stat-label {
+  font-size: 13.5px; color: var(--text-muted); font-weight: 500;
+}
+
+/* ----- Industries grid ----- */
+.industries {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+.industry {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: all 0.2s;
+}
+.industry:hover {
+  border-color: var(--border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.industry-name {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 600;
+  color: var(--accent); margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+.industry-why {
+  font-size: 14.5px; color: var(--text-muted); line-height: 1.6;
+}
+
+/* ----- Experience ----- */
+.experience-grid { display: flex; flex-direction: column; gap: 20px; }
+.exp-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 32px;
+  transition: all 0.25s ease;
+}
+.exp-card:hover {
+  border-color: var(--border);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.exp-header {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  margin-bottom: 8px; gap: 16px; flex-wrap: wrap;
+}
+.exp-role {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  color: var(--text); letter-spacing: -0.01em;
+}
+.exp-date {
+  font-size: 13px; color: var(--text-muted);
+  background: var(--bg); padding: 6px 12px;
+  border-radius: 999px; white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.exp-company {
+  font-size: 15px; color: var(--success);
+  font-weight: 500; margin-bottom: 16px;
+}
+.exp-summary {
+  color: var(--text-muted);
+  font-size: 15.5px; line-height: 1.7;
+}
+.exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.exp-tag {
+  font-size: 12.5px; font-weight: 500;
+  background: var(--bg); color: var(--accent);
+  padding: 5px 12px; border-radius: 999px;
+  border: 1px solid var(--border-soft);
+}
+
+/* ----- Skills ----- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.skill-group {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 26px;
+}
+.skill-group h3 {
+  font-family: var(--font-display);
+  font-size: 17px; font-weight: 600;
+  color: var(--accent); margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+.skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-pill {
+  font-size: 13px; font-weight: 500;
+  color: var(--text); background: var(--bg);
+  padding: 6px 12px; border-radius: 999px;
+  border: 1px solid var(--border-soft);
+}
+
+/* ----- Case study cards ----- */
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 28px;
+}
+
+.case-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex; flex-direction: column;
+}
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border);
+}
+
+.case-thumb {
+  aspect-ratio: 16 / 10;
+  background: var(--accent);
+  position: relative;
+  overflow: hidden;
+}
+.case-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.case-card:hover .case-thumb img {
+  transform: scale(1.04);
+}
+
+/* Gradient placeholder thumbs (for cases without screenshots) */
+.case-thumb-fintech { background: linear-gradient(135deg, #06807d 0%, #064045 100%); }
+.case-thumb-gaming { background: linear-gradient(135deg, #005f73 0%, #1d3557 100%); }
+.case-thumb-fiber { background: linear-gradient(135deg, #064045 0%, #005f73 100%); }
+.case-thumb-zairaa { background: linear-gradient(135deg, #005f73 0%, #064045 100%); }
+.case-thumb-abeg { background: linear-gradient(135deg, #06807d 0%, #1d3557 100%); }
+
+.case-thumb-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 100%);
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+.case-thumb-text small {
+  display: block; font-family: var(--font-body);
+  font-size: 12px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  margin-top: 8px; opacity: 0.8;
+}
+
+.case-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+
+.case-meta {
+  display: flex; gap: 8px;
+  margin-bottom: 14px; flex-wrap: wrap;
+}
+.case-meta-tag {
+  font-size: 11.5px; font-weight: 600;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--success);
+}
+.case-meta-tag.divider::before {
+  content: '·'; margin-right: 8px; color: var(--text-muted);
+}
+
+.case-title {
+  font-family: var(--font-display);
+  font-size: 24px; font-weight: 600;
+  color: var(--text); margin-bottom: 12px;
+  line-height: 1.2; letter-spacing: -0.01em;
+}
+.case-desc {
+  color: var(--text-muted);
+  font-size: 15px; line-height: 1.6;
+  margin-bottom: 20px; flex: 1;
+}
+.case-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--accent); font-weight: 600;
+  font-size: 14.5px; align-self: flex-start;
+  transition: gap 0.2s;
+}
+.case-link:hover { gap: 10px; color: var(--success); }
+
+/* "Featured" highlight on flagship card */
+.case-card.featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: stretch;
+}
+.case-card.featured .case-thumb { aspect-ratio: auto; }
+.case-card.featured .case-body { padding: 44px; justify-content: center; }
+.case-card.featured .case-title { font-size: 32px; }
+.case-card.featured .case-desc { font-size: 16px; }
+
+@media (max-width: 768px) {
+  .case-card.featured { grid-template-columns: 1fr; }
+  .case-card.featured .case-body { padding: 28px; }
+}
+
+.featured-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 11.5px; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: white; background: var(--success);
+  padding: 4px 10px; border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+/* ----- About ----- */
+.about-hero { padding: 80px 0 40px; }
+
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr;
+  gap: 60px; align-items: start;
+}
+@media (max-width: 768px) {
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+.about-portrait {
+  aspect-ratio: 4 / 5;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--success) 100%);
+  border-radius: var(--radius-lg);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 96px; font-weight: 600;
+  color: white; letter-spacing: -0.02em;
+  position: relative; overflow: hidden;
+}
+.about-portrait::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 50%);
+}
+
+.about-text p {
+  font-size: 17px; color: var(--text);
+  line-height: 1.75; margin-bottom: 20px;
+}
+.about-text p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 60px; font-weight: 600;
+  float: left; line-height: 0.9;
+  margin: 6px 12px 0 0; color: var(--accent);
+}
+
+/* ----- Pull quote ----- */
+.pull-quote {
+  background: var(--surface);
+  border-left: 4px solid var(--success);
+  padding: 32px 36px; border-radius: var(--radius);
+  margin: 40px 0;
+}
+.pull-quote p {
+  font-family: var(--font-display);
+  font-size: 22px; font-style: italic; font-weight: 500;
+  color: var(--accent); line-height: 1.4; letter-spacing: -0.01em;
+}
+
+/* ----- Two-column lists ----- */
+.list-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px; margin-top: 24px;
+}
+@media (max-width: 600px) { .list-grid { grid-template-columns: 1fr; } }
+
+.list-block h4 {
+  font-family: var(--font-display);
+  font-size: 16px; color: var(--success);
+  margin-bottom: 12px; font-weight: 600; letter-spacing: -0.01em;
+}
+.list-block ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.list-block li {
+  font-size: 15px; color: var(--text);
+  padding-left: 20px; position: relative;
+}
+.list-block li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--success); font-weight: 600;
+}
+
+/* ----- Testimonials ----- */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px; margin-top: 24px;
+}
+.testimonial {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex; flex-direction: column;
+}
+.testimonial-quote {
+  font-size: 15px; color: var(--text);
+  line-height: 1.65; margin-bottom: 18px; flex: 1;
+}
+.testimonial-quote::before {
+  content: '"'; font-family: var(--font-display);
+  font-size: 38px; line-height: 0; vertical-align: -0.4em;
+  color: var(--success); margin-right: 4px;
+}
+.testimonial-author {
+  font-weight: 600; color: var(--text); font-size: 14px;
+}
+.testimonial-role {
+  font-size: 13px; color: var(--text-muted); margin-top: 2px;
+}
+
+/* ----- Writing list ----- */
+.writing-list { display: flex; flex-direction: column; gap: 4px; }
+.writing-item {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 24px; align-items: baseline;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--border-soft);
+  transition: padding 0.2s;
+}
+.writing-item:hover { padding-left: 8px; }
+.writing-item:last-child { border-bottom: none; }
+.writing-date {
+  font-size: 13px; color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.writing-title {
+  font-family: var(--font-display);
+  font-size: 21px; font-weight: 600;
+  color: var(--text); letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+.writing-arrow {
+  color: var(--success); font-size: 20px;
+  transition: transform 0.2s;
+}
+.writing-item:hover .writing-arrow { transform: translateX(6px); }
+
+@media (max-width: 600px) {
+  .writing-item { grid-template-columns: 1fr auto; gap: 12px; }
+  .writing-date { grid-column: 1 / -1; }
+}
+
+/* ----- Article (case study deep dive / writing) ----- */
+.article {
+  background: var(--surface);
+  padding: 60px 0;
+}
+.article-header {
+  padding: 80px 0 40px;
+  border-bottom: 1px solid var(--border-soft);
+  background: var(--surface);
+}
+.article-meta {
+  display: flex; gap: 8px; margin-bottom: 18px; flex-wrap: wrap;
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success);
+}
+.article-meta span:not(:last-child)::after {
+  content: '·'; margin-left: 8px; color: var(--text-muted);
+}
+.article-title {
+  font-family: var(--font-display);
+  font-size: clamp(34px, 5vw, 56px);
+  font-weight: 500; line-height: 1.05;
+  letter-spacing: -0.025em; margin-bottom: 16px;
+}
+.article-deck {
+  font-size: 19px; color: var(--text-muted);
+  line-height: 1.55; max-width: 680px;
+}
+
+.article-body { max-width: 720px; margin: 0 auto; padding: 60px 24px; }
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 30px; font-weight: 600;
+  margin-top: 48px; margin-bottom: 16px;
+  color: var(--accent); letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: 22px; font-weight: 600;
+  margin-top: 32px; margin-bottom: 12px;
+  color: var(--success); letter-spacing: -0.01em;
+}
+.article-body p {
+  font-size: 17.5px; line-height: 1.75;
+  color: var(--text); margin-bottom: 18px;
+}
+.article-body p strong { color: var(--accent); font-weight: 600; }
+.article-body ul, .article-body ol {
+  margin: 0 0 24px 24px; padding-left: 8px;
+}
+.article-body li {
+  font-size: 17px; line-height: 1.7;
+  color: var(--text); margin-bottom: 8px;
+}
+.article-body blockquote {
+  border-left: 3px solid var(--success);
+  padding: 4px 0 4px 24px;
+  margin: 32px 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 21px; color: var(--accent);
+  line-height: 1.45;
+}
+.article-body img {
+  border-radius: var(--radius);
+  margin: 32px 0;
+  box-shadow: var(--shadow);
+}
+.article-body figure { margin: 32px 0; }
+.article-body figcaption {
+  font-size: 14px; color: var(--text-muted);
+  text-align: center; margin-top: 12px;
+  font-style: italic;
+}
+.article-body hr {
+  border: none;
+  border-top: 1px solid var(--border-soft);
+  margin: 48px 0;
+}
+
+/* Key takeaway / callout */
+.callout {
+  background: var(--bg);
+  border-left: 4px solid var(--success);
+  padding: 24px 28px;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  margin: 32px 0;
+}
+.callout-label {
+  font-size: 12px; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 6px;
+}
+.callout p { font-size: 16px !important; margin-bottom: 0 !important; }
+
+/* Article navigation */
+.article-nav {
+  background: var(--bg);
+  padding: 60px 0; margin-top: 0;
+}
+.article-nav-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 600px) {
+  .article-nav-grid { grid-template-columns: 1fr; }
+}
+.article-nav-card {
+  background: var(--surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: all 0.25s;
+}
+.article-nav-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--border);
+}
+.article-nav-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--success); margin-bottom: 8px;
+}
+.article-nav-title {
+  font-family: var(--font-display);
+  font-size: 18px; font-weight: 600;
+  color: var(--text); line-height: 1.3;
+}
+
+/* ----- Contact section (deep navy) ----- */
+.contact {
+  background: var(--contact-bg);
+  color: white; padding: 90px 0;
+  margin-top: 80px;
+  position: relative; overflow: hidden;
+}
+.contact::before {
+  content: ''; position: absolute;
+  top: -100px; right: -100px;
+  width: 360px; height: 360px;
+  background: radial-gradient(circle, rgba(0, 95, 115, 0.45) 0%, transparent 70%);
+  border-radius: 50%; pointer-events: none;
+}
+.contact-inner { position: relative; z-index: 1; }
+.contact .section-eyebrow { color: #83c5be; }
+.contact .section-title { color: white; }
+.contact-sub {
+  font-size: 18px; color: rgba(255, 255, 255, 0.75);
+  max-width: 600px; margin-bottom: 40px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px; margin-bottom: 40px;
+}
+.contact-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  padding: 22px; transition: all 0.2s;
+}
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #83c5be;
+  transform: translateY(-2px);
+}
+.contact-label {
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: #83c5be; margin-bottom: 8px;
+}
+.contact-value {
+  font-size: 16px; color: white;
+  font-weight: 500; word-break: break-word;
+}
+.contact-cta {
+  background: #83c5be; color: var(--accent);
+  padding: 16px 32px;
+}
+.contact-cta:hover { background: white; color: var(--accent); }
+
+/* ----- Footer ----- */
+footer {
+  padding: 32px 0; text-align: center;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 40px;
+}
+
+/* ----- Responsive nav ----- */
+@media (max-width: 640px) {
+  .nav-links { gap: 18px; }
+  .nav-links a { font-size: 14px; }
+  .hero { padding: 60px 0 50px; }
+  section { padding: 56px 0; }
+  .exp-card { padding: 24px; }
+  .case-body { padding: 22px; }
+  .stats-strip { padding: 24px; gap: 20px; }
+  .stat-num { font-size: 34px; }
+}
+
+/* ----- Animations ----- */
+.fade-up {
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0; transform: translateY(20px);
+}
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+.delay-4 { animation-delay: 0.4s; }
+
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Eniola<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="case-studies.html">Work</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="fade-up">
+        <div class="hero-eyebrow">Product Manager · Design Thinker · Customer Expert · QA Specialist</div>
+      </div>
+      <div class="fade-up delay-1">
+        <h1>I ship products people trust, at <em>any</em> scale.</h1>
+      </div>
+      <div class="fade-up delay-2">
+        <p class="hero-sub">
+          I'm Eniola Ajayi-Bembe, and I've spent the past 6 years owning the end-to-end product
+          lifecycles and shipping innovative consumer SaaS products.
+          I lead from spec, development, to launch, and bring a rare combination of product
+          management depth, customer success experience, QA discipline that catches what others
+          miss, and design fluency that makes the work better before it gets to engineering.
+        </p>
+      </div>
+      <div class="hero-actions fade-up delay-3">
+        <a href="case-studies.html" class="btn btn-primary">
+          See my work <span class="btn-arrow">→</span>
+        </a>
+        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+        
+      </div>
+    </div>
+  </header>
+
+  <section style="padding-top: 0; padding-bottom: 40px;">
+    <div class="container">
+      <div class="stats-strip">
+        <div class="stat-item">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Total Years Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2.5M+</div>
+          <div class="stat-label">Users Impacted</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Industries</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">30%</div>
+          <div class="stat-label">Fewer Reported Bugs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries — explicit range demonstration -->
+  <section style="padding-top: 40px;">
+    <div class="container">
+      <div class="section-eyebrow">Range</div>
+      <h2 class="section-title">I've led across multiple industries.</h2>
+      <p class="section-sub">
+        I have the execution discipline that transfers across industries and consumer
+        products, the pattern is the same: learn fast, ship fast, lead fast. Here's what that looks like.
+      </p>
+
+      <div class="industries">
+        <div class="industry">
+          <div class="industry-name">Consumer SaaS</div>
+          <p class="industry-why">
+            Co-founded a social payments platform that caters to over 2.5 million users on iOS and
+            Android. Led product strategy and oversaw the entire product lifecycle.
+          </p>
+        </div>
+        <div class="industry">
+          <div class="industry-name">B2B &amp; B2C Fintech</div>
+          <p class="industry-why">
+            Drove product strategy and people operations at a pre-launch startup,
+            including defining the MVP to leading the product through to a successful public release.
+          </p>
+        </div>
+        <div class="industry">
+          <div class="industry-name">Consumer Goods</div>
+          <p class="industry-why">
+            Oversaw administrative operations for a multinational organization,
+            transforming fragmented record keeping into structured systems and introducing
+            processes that measurably improved day-to-day workflow.
+          </p>
+        </div>
+        <div class="industry">
+          <div class="industry-name">Gaming &amp; Design</div>
+          <p class="industry-why">
+            Led the design of the entire UX layer and end-to-end userflows of
+            the platform including web and mobile designs, from discovery to prototyped high-fidelity
+            interfaces.
+          </p>
+        </div>
+        <div class="industry">
+          <div class="industry-name">Customer Success</div>
+          <p class="industry-why">
+            Built and scaled the customer success function from the ground up,
+            from working solo to leading a team of 15+ specialists while designing the workflows
+            and escalation frameworks to maintain quality at scale.
+          </p>
+        </div>
+        <div class="industry">
+          <div class="industry-name">Ecommerce</div>
+          <p class="industry-why">
+            Managed end-to-end customer resolution, from handling refunds and order
+            placements to bug escalations to engineering, tracking fixes, and user
+            communications.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-eyebrow">Experience</div>
+      <h2 class="section-title">Where I've added value</h2>
+      <p class="section-sub">
+        Six years of shipping products across iOS, Android, and web platforms,
+        owning the full process from strategy, discovery and roadmap, to launch
+        and beyond.
+      </p>
+
+      <div class="experience-grid">
+
+        <article class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Co-founder, Product Manager</div>
+              <div class="exp-company">PocketApp (formerly Abeg App), Nigeria</div>
+            </div>
+            <div class="exp-date">Full-Time – Remote</div>
+          </div>
+          <p class="exp-summary">
+            Co-founded and grew a social fintech start-up from its first customer to over
+            2 million users in less than 3 years. It was acquired in 2021 and I stayed on to lead product
+            strategy and execution, and oversaw the entire product lifecycle. Also, scaled the customer
+            success team from working solo to leading a team of 15+ specialists. Drafted and designed
+            content strategies across multiple platforms, enhancing early brand awareness and
+            product adoption prelaunch.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Founder</span>
+            <span class="exp-tag">Strategy</span>
+            <span class="exp-tag">Cross-functional Leadership</span>
+            <span class="exp-tag">Roadmap</span>
+            <span class="exp-tag">UAT</span>
+            <span class="exp-tag">User Research</span>
+            <span class="exp-tag">Customer Success</span>
+          </div>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Product Designer</div>
+              <div class="exp-company">Smart Applications LLC (SmartGames), USA</div>
+            </div>
+            <div class="exp-date">Part-Time – Remote</div>
+          </div>
+          <p class="exp-summary">
+            Created core player facing UI/UX foundations for a US gaming platform. I bridged
+            user research with a scalable design system that unified the experience across
+            web and mobile. To reduce player friction, I conducted user research, mapped
+            user flows, to create low-fidelity wireframes and refined them into high-fidelity
+            dashboards therefore enhancing the overall user experience of the platform.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Design System</span>
+            <span class="exp-tag">High-Fidelity</span>
+            <span class="exp-tag">Wireframes</span>
+            <span class="exp-tag">Prototyping</span>
+            <span class="exp-tag">User &amp; Design Research</span>
+            <span class="exp-tag">Collaboration</span>
+          </div>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Head of Product & Operations Lead</div>
+              <div class="exp-company">Zairaa Technologies, Nigeria</div>
+            </div>
+            <div class="exp-date">Consultant – Remote</div>
+          </div>
+          <p class="exp-summary">
+            Led the product strategy and people operations for a B2B &amp; B2C fintech startup,
+            navigating the product from MVP to launch in 6 months. By implementing a
+            high-impact prioritization framework, I led a cross-functional team across product,
+            design, engineering, and customer success, using user testing to eliminate
+            critical friction points to deliver a seamless day-one experience for users.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Cross-functional Leadership</span>
+            <span class="exp-tag">Strategy</span>
+            <span class="exp-tag">Roadmap</span>
+            <span class="exp-tag">UAT</span>
+            <span class="exp-tag">User Research</span>
+            <span class="exp-tag">Operations</span>
+          </div>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">Customer Service</div>
+              <div class="exp-company">Jumia Nigeria</div>
+            </div>
+            <div class="exp-date">Full-Time – On-Site</div>
+          </div>
+          <p class="exp-summary">
+            Managed end-to-end customer support operations, including order placement
+            assistance, inquiries, refunds, and order tracking. Coordinated bug escalations
+            with engineering teams, monitored issue resolution progress, communicated
+            updates and feedback to users, and conducted follow-ups to ensure
+            high customer satisfaction.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Customer Support</span>
+            <span class="exp-tag">Problem-Solving</span>
+            <span class="exp-tag">CRM</span>
+            <span class="exp-tag">Retention</span>
+            <span class="exp-tag">Order Management</span>
+          </div>
+        </article>
+
+        <article class="exp-card">
+          <div class="exp-header">
+            <div>
+              <div class="exp-role">HR/Admin Officer</div>
+              <div class="exp-company">Dangote Industries Ltd, Nigeria</div>
+            </div>
+            <div class="exp-date">Full-Time – On-Site</div>
+          </div>
+          <p class="exp-summary">
+            Managed administrative operations for a multinational organization, streamlining
+            workflows, recordkeeping, and processing systems to improve operational efficiency
+            by 40%. Transformed fragmented administrative processes into organized systems,
+            and introduced process improvements that enhanced day-to-day operations and
+            overall productivity.
+          </p>
+          <div class="exp-tags">
+            <span class="exp-tag">Operations Management</span>
+            <span class="exp-tag">Problem-Solving</span>
+            <span class="exp-tag">Administrative Support</span>
+            <span class="exp-tag">Process Improvement</span>
+            <span class="exp-tag">Cross-functional Coordination</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-eyebrow">Skills &amp; Tools</div>
+      <h2 class="section-title">Things I bring to a team</h2>
+      <p class="section-sub">
+        These are a few of the skills, tools, and hands-on experience I've used to
+        design, document, build, and ship successful products.
+      </p>
+
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3>Product Management</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Agile/Scrum</span>
+            <span class="skill-pill">Roadmapping</span>
+            <span class="skill-pill">Product Strategy &amp; Vision</span>
+            <span class="skill-pill">Stakeholder Management</span>
+            <span class="skill-pill">User Research</span>
+            <span class="skill-pill">Spec Writing</span>
+            <span class="skill-pill">UI/UX Review</span>
+            <span class="skill-pill">Data Analysis</span>
+            <span class="skill-pill">Go-to-Market Strategy</span>
+            <span class="skill-pill">Product Discovery</span>
+            <span class="skill-pill">Feature Prioritization</span>
+            <span class="skill-pill">Cross-functional Leadership</span>
+            <span class="skill-pill">Communication</span>
+            <span class="skill-pill">Product Operations</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>QA &amp; Customer Success</h3>
+          <div class="skill-list">
+            <span class="skill-pill">UAT</span>
+            <span class="skill-pill">Bug Tracking &amp; Reporting</span>
+            <span class="skill-pill">QA Documentation</span>
+            <span class="skill-pill">Agile/Scrum</span>
+            <span class="skill-pill">Release Coordination</span>
+            <span class="skill-pill">Attention to Detail</span>
+            <span class="skill-pill">Problem Solving</span>
+            <span class="skill-pill">Communication</span>
+            <span class="skill-pill">CRM</span>
+            <span class="skill-pill">Feedback Analysis</span>
+            <span class="skill-pill">KPI &amp; Success Metrics</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Design Fluency</h3>
+          <div class="skill-list">
+            <span class="skill-pill">User Flows</span>
+            <span class="skill-pill">Design Systems</span>
+            <span class="skill-pill">Low &amp; High-fi Mockups</span>
+            <span class="skill-pill">Prototyping</span>
+            <span class="skill-pill">User Research</span>
+            <span class="skill-pill">User Interviews</span>
+            <span class="skill-pill">UI Visual Design</span>
+            <span class="skill-pill">UX Research</span>
+            <span class="skill-pill">Wireframing</span>
+            <span class="skill-pill">Usability Testing</span>
+            <span class="skill-pill">Collaboration</span>
+            <span class="skill-pill">Design Thinking</span>
+            <span class="skill-pill">Stakeholder Communication</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>People Ops &amp; Leadership</h3>
+          <div class="skill-list">
+            <span class="skill-pill">HR Operations</span>
+            <span class="skill-pill">Employee Lifecycle Management</span>
+            <span class="skill-pill">Onboarding &amp; Offboarding</span>
+            <span class="skill-pill">Interview Coordination</span>
+            <span class="skill-pill">Process Optimization</span>
+            <span class="skill-pill">Conflict Resolution</span>
+            <span class="skill-pill">Internal Communications</span>
+            <span class="skill-pill">Performance Management</span>
+            <span class="skill-pill">Talent Acquisition</span>
+            <span class="skill-pill">Compliance</span>
+            <span class="skill-pill">Stakeholder Management</span>
+          </div>
+        </div>
+
+        <div class="skill-group">
+          <h3>Tools &amp; Platforms</h3>
+          <div class="skill-list">
+            <span class="skill-pill">Notion</span>
+            <span class="skill-pill">Balsamiq</span>
+            <span class="skill-pill">Figma</span>
+            <span class="skill-pill">Miro</span>
+            <span class="skill-pill">ClickUp</span>
+            <span class="skill-pill">Trello</span>
+            <span class="skill-pill">Mixpanel</span>
+            <span class="skill-pill">Zeplin</span>
+            <span class="skill-pill">Linear</span>
+            <span class="skill-pill">Canva</span>
+            <span class="skill-pill">Slack</span>
+            <span class="skill-pill">Teams</span>
+            <span class="skill-pill">Front App</span>
+            <span class="skill-pill">Google Workspace</span>
+            <span class="skill-pill">Zoho Workspace</span>
+            <span class="skill-pill">Customer.io</span>
+            <span class="skill-pill">AI Tools</span>
+            <span class="skill-pill">SeamlessHR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Design Work -->
+  <section id="design-work">
+    <div class="container">
+      <div class="section-eyebrow">Design Work</div>
+      <h2 class="section-title">Projects I've designed</h2>
+
+      <div class="case-grid">
+
+        <a href="work/hrmp/index.html" class="case-card" style="text-decoration: none;">
+          <div class="case-thumb case-thumb-gaming">
+            <img src="Portfolio-Images/HRMP-preview.png" alt="HRMP case preview">
+            <div class="case-thumb-text"><small>Case Study</small></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-meta-tag">Web App</span>
+              <span class="case-meta-tag divider">Dashboard</span>
+              <span class="case-meta-tag divider">UX Research</span>
+              <span class="case-meta-tag divider">Design Assessment</span>
+            </div>
+            <h3 class="case-title">Human Resource Management Platform</h3>
+            <p class="case-desc">
+              A full web dashboard design for an HR management platform case study,
+              featuring employee directories, team management, leave request workflows,
+              and task dashboards. Designed end-to-end interactive Figma prototypes.
+            </p>
+            <span class="case-link">Read story <span>&rarr;</span></span>
+          </div>
+        </a>
+
+        <a href="work/fiberone/index.html" class="case-card" style="text-decoration: none;">
+          <div class="case-thumb case-thumb-fiber">
+            <img src="Portfolio-Images/Fiber-preview.png" alt="Fiberone case preview">
+            <div class="case-thumb-text"><small>App & Web Redesign</small></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-meta-tag">Mobile App</span>
+              <span class="case-meta-tag divider">Website</span>
+              <span class="case-meta-tag divider">Redesign</span>
+              <span class="case-meta-tag divider">UX Research</span>
+            </div>
+            <h3 class="case-title">Fiberone Broadband Redesign</h3>
+            <p class="case-desc">
+              Complete redesign of a broadband service provider's mobile app and website. Redesigned
+              navigation, simplified the renewal process, improved information architecture,
+              and created a cleaner customer service flow.
+            </p>
+            <span class="case-link">Read story <span>&rarr;</span></span>
+          </div>
+        </a>
+
+        <a href="work/smartgames/index.html" class="case-card" style="text-decoration: none;">
+          <div class="case-thumb case-thumb-fintech">
+            <img src="Portfolio-Images/SMG-billing.jpg" alt="Smart Games case preview">
+            <div class="case-thumb-text"><small>Gaming Platform</small></div>
+          </div>
+          <div class="case-body">
+            <div class="case-meta">
+              <span class="case-meta-tag">Web App</span>
+              <span class="case-meta-tag divider">Dashboard</span>
+              <span class="case-meta-tag divider">Design System</span>
+              <span class="case-meta-tag divider">Wireframes</span>
+            </div>
+            <h3 class="case-title">Smart Games</h3>
+            <p class="case-desc">
+              Designed player-facing and admin-facing UI/UX wireframes and high-fidelity
+              dashboard interfaces that enabled users to manage coupons, transactions,
+              payments, account settings, and custom game creation. Developed intuitive
+              support and onboarding experiences, including help centres, tutorial content,
+              and how-to video access, to improve usability and user engagement.
+            </p>
+            <span class="case-link">Read story <span>&rarr;</span></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="section-eyebrow">Contact</div>
+      <h2 class="section-title">Let's talk about products.</h2>
+      <p class="contact-sub">
+        I'm always open to interesting conversations around product, quality, customer success,
+        and everything in between. I'm also open to remote-friendly Product
+        roles and opportunities where I can help build and refine great user experiences.
+      </p>
+
+      <div class="contact-grid">
+        <a href="mailto:enny.teekay@gmail.com" class="contact-item">
+          <div class="contact-label">Email</div>
+          <div class="contact-value">enny.teekay@gmail.com</div>
+        </a>
+        <a href="https://dribbble.com/EnnyTeekay" class="contact-item" target="_blank" rel="noopener">
+          <div class="contact-label">Dribbble</div>
+          <div class="contact-value">dribbble.com/EnnyTeekay</div>
+        </a>
+        <a href="https://linkedin.com/in/eniolaajayi-bembe" class="contact-item" target="_blank" rel="noopener">
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">/in/eniolaajayi-bembe</div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-label">Open To</div>
+          <div class="contact-value">Remote · Relocation · Hybrid</div>
+        </div>
+      </div>
+
+      <a href="mailto:enny.teekay@gmail.com" class="btn contact-cta">
+        Send me a message <span class="btn-arrow">→</span>
+      </a>
+    </div>
+    <footer>
+      <div class="container">
+        © 2026 Eniola Ajayi-Bembe · Built with <span aria-label="green heart" style="color:#83c5be;">♥</span>
+      </div>
+    </footer>
+  </section>
+
+</body>
+</html>
